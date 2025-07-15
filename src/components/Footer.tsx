@@ -16,11 +16,11 @@ export default function Footer() {
           <div className="text-center mb-8">
             <h2 className="text-xl font-semibold text-zinc-100 flex items-center justify-center gap-2 mb-3">
               <Sparkles className="w-5 h-5 text-emerald-400" />
-              Let's connect
+              Let&apos;s connect
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed">
               Passionate about creating thoughtful digital experiences.
-              Let's build something great together!
+              Let&apos;s build something great together!
             </p>
           </div>
 
@@ -93,7 +93,7 @@ export default function Footer() {
           <div className="flex-1 space-y-4">
             <h2 className="text-2xl font-semibold text-zinc-100 flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-emerald-400" />
-              Let's build something great together
+              Let&apos;s build something great together
             </h2>
             <p className="text-zinc-400 max-w-lg">
               I'm passionate about creating thoughtful, high-impact digital experiences.

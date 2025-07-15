@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Github, Linkedin, Mail, ExternalLink, ChevronRight, Code, Palette, Zap, Users, Calendar, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, ChevronRight, Code, Palette, Zap, Calendar, MapPin } from 'lucide-react';
 import { featuredProjects, skills, stats } from '@/lib';
 import CountUp from 'react-countup';
 
@@ -273,7 +273,7 @@ export default function Home() {
       <section id="contact" className="py-20 px-6 sm:px-12">
         <div className="max-w-6xl mx-auto text-start">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Let's 
+            Let&apos;s 
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> work together</span>
           </h2>
           <p className="md:text-xl text-zinc-400 mb-6 md:mb-12 max-w-3xl">
