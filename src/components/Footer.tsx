@@ -96,7 +96,7 @@ export default function Footer() {
               Let&apos;s build something great together
             </h2>
             <p className="text-zinc-400 max-w-lg">
-              I'm passionate about creating thoughtful, high-impact digital experiences.
+              I&apos;m passionate about creating thoughtful, high-impact digital experiences.
               Whether you have a project, a startup idea, or just want to connect over tech — feel free to reach out!
             </p>
             <Link href="/blog">

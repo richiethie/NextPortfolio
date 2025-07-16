@@ -12,23 +12,31 @@ export default function Header() {
     <>
       <nav className="fixed top-0 left-0 w-full bg-zinc-900/80 backdrop-blur-md border-b border-zinc-700/50 z-50">
         <div className="mx-auto px-6 sm:px-12 py-4 flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center cursor-pointer">
-                <Image
-                    src="/portfolio-logo.png"
-                    alt="Richie Thiesfeldt logo"
-                    width={48}
-                    height={48}
-                    priority
-                />
-            </Link>
+          {/* Logo */}
+          <Link href="/" className="flex items-center cursor-pointer">
+            <Image
+              src="/portfolio-logo.png"
+              alt="Richie Thiesfeldt logo"
+              width={48}
+              height={48}
+              priority
+            />
+          </Link>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/about" className="text-zinc-400 hover:text-zinc-100 transition-colors">About</a>
-            <a href="/blog" className="text-zinc-400 hover:text-zinc-100 transition-colors">Blog</a>
-            <a href="/projects" className="text-zinc-400 hover:text-zinc-100 transition-colors">Projects</a>
-            <a href="/contact" className="text-zinc-400 hover:text-zinc-100 transition-colors">Contact</a>
+            <Link href="/about" className="text-zinc-400 hover:text-zinc-100 transition-colors">
+              About
+            </Link>
+            <Link href="/blog" className="text-zinc-400 hover:text-zinc-100 transition-colors">
+              Blog
+            </Link>
+            <Link href="/projects" className="text-zinc-400 hover:text-zinc-100 transition-colors">
+              Projects
+            </Link>
+            <Link href="/contact" className="text-zinc-400 hover:text-zinc-100 transition-colors">
+              Contact
+            </Link>
             <a
               href="/Resume-July-25.pdf"
               download
@@ -52,43 +60,32 @@ export default function Header() {
       {/* Full-screen Mobile Menu with Background Blur */}
       {menuOpen && (
         <>
-          {/* Backdrop with blur effect */}
-          <div 
+          <div
             className="fixed inset-0 bg-zinc-900/80 backdrop-blur-md z-40"
             onClick={() => setMenuOpen(false)}
           />
-          
-          {/* Menu Content */}
           <div className="fixed inset-0 flex flex-col items-center justify-center space-y-8 z-50 pointer-events-none">
             <div className="pointer-events-auto flex flex-col items-center space-y-8">
-              <a 
-                href="/about" 
-                className="text-2xl text-zinc-300 hover:text-emerald-400 transition-colors" 
-                onClick={() => setMenuOpen(false)}
-              >
-                About
-              </a>
-              <a 
-                href="/blog" 
-                className="text-2xl text-zinc-300 hover:text-emerald-400 transition-colors" 
-                onClick={() => setMenuOpen(false)}
-              >
-                Blog
-              </a>
-              <a 
-                href="/projects" 
-                className="text-2xl text-zinc-300 hover:text-emerald-400 transition-colors" 
-                onClick={() => setMenuOpen(false)}
-              >
-                Projects
-              </a>
-              <a 
-                href="/contact" 
-                className="text-2xl text-zinc-300 hover:text-emerald-400 transition-colors" 
-                onClick={() => setMenuOpen(false)}
-              >
-                Contact
-              </a>
+              <Link href="/about" onClick={() => setMenuOpen(false)}>
+                <span className="text-2xl text-zinc-300 hover:text-emerald-400 transition-colors">
+                  About
+                </span>
+              </Link>
+              <Link href="/blog" onClick={() => setMenuOpen(false)}>
+                <span className="text-2xl text-zinc-300 hover:text-emerald-400 transition-colors">
+                  Blog
+                </span>
+              </Link>
+              <Link href="/projects" onClick={() => setMenuOpen(false)}>
+                <span className="text-2xl text-zinc-300 hover:text-emerald-400 transition-colors">
+                  Projects
+                </span>
+              </Link>
+              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+                <span className="text-2xl text-zinc-300 hover:text-emerald-400 transition-colors">
+                  Contact
+                </span>
+              </Link>
               <a
                 href="/Resume-July-25.pdf"
                 download

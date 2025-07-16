@@ -28,7 +28,7 @@ export default function Home() {
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl text-start lg:text-7xl font-bold mb-3 md:mb-6">
-                  <span className="block">Hi, I'm</span>
+                  <span className="block">Hi, I&apos;m</span>
                   <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-500 bg-clip-text text-transparent">
                     Richie Thiesfeldt
                   </span>
@@ -125,12 +125,12 @@ export default function Home() {
                 at a time
               </h2>
               <p className="text-sm md:text-lg text-zinc-400 mb-6 leading-relaxed">
-                I'm a passionate full-stack developer with 4+ years of experience creating scalable web applications. 
+                I&apos;m a passionate full-stack developer with 4+ years of experience creating scalable web applications. 
                 My expertise spans modern JavaScript frameworks, backend development with Go and Node.js, and cloud infrastructure.
               </p>
               <p className="text-sm md:text-lg text-zinc-400 mb-8 leading-relaxed">
-                I love turning complex problems into simple, beautiful solutions. When I'm not coding, 
-                you'll find me exploring new technologies, contributing to open source, or mentoring fellow developers.
+                I love turning complex problems into simple, beautiful solutions. When I&apos;m not coding, 
+                you&apos;ll find me exploring new technologies, contributing to open source, or mentoring fellow developers.
               </p>
               
               <div className="flex items-center gap-4 text-sm text-zinc-500 md:mb-8">
@@ -277,8 +277,8 @@ export default function Home() {
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> work together</span>
           </h2>
           <p className="md:text-xl text-zinc-400 mb-6 md:mb-12 max-w-3xl">
-            I'm always interested in new opportunities and exciting projects. 
-            Whether you're looking to build something amazing or just want to chat about tech, I'd love to hear from you.
+            I&apos;m always interested in new opportunities and exciting projects. 
+            Whether you&apos;re looking to build something amazing or just want to chat about tech, I&apos;d love to hear from you.
           </p>
           
           <div className="grid md:grid-cols-3 text-center gap-6 mb-12">

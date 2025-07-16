@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ExternalLink, Github, Code, Lock } from "lucide-react";
+import { ExternalLink, Github, Lock } from "lucide-react";
 import { projects } from "@/lib";
 
 export default function ProjectsPage() {
