@@ -135,14 +135,3 @@ export const stats = [
   { number: 20, suffix: "+", label: "Technologies" },
   { number: 100, suffix: "%", label: "Client Satisfaction" },
 ];
-
-
-
-  // {
-  //   title: "BitDrop Social Platform",
-  //   description:
-  //     "A mobile app for sharing and ranking memes in public and private groups, built with React Native, Golang, and Supabase.",
-  //   tech: ["React Native", "Golang", "Supabase", "PostgreSQL"],
-  //   link: null, // coming soon
-  //   github: "private", // mark as private
-  // },

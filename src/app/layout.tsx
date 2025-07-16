@@ -8,10 +8,32 @@ import "./globals.css";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Richie Thiesfeldt | My Portfolio",
-  description: "Showcasing my work and projects",
+  title: "Richie Thiesfeldt | Software Engineer & Full-Stack Developer",
+  description: "Explore Richie Thiesfeldt's portfolio: software projects, case studies, and full-stack development work with React, Node.js, Golang, and more.",
   icons: {
-    icon: '/favicon.ico', // or '/favicon.png' if using PNG
+    icon: '/favicon.ico',
+  },
+  openGraph: {
+    title: "Richie Thiesfeldt | Software Engineer & Full-Stack Developer",
+    description: "Explore Richie Thiesfeldt's portfolio: software projects, case studies, and full-stack development work.",
+    url: "https://richiethie.com",
+    siteName: "Richie Thiesfeldt Portfolio",
+    images: [
+      {
+        url: "/portfolio-og-image.png", // Create this image (1200x630) for previews
+        width: 1200,
+        height: 630,
+        alt: "Richie Thiesfeldt Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Richie Thiesfeldt | Software Engineer & Full-Stack Developer",
+    description: "Explore Richie Thiesfeldt's portfolio: software projects, case studies, and full-stack development work.",
+    images: ["/portfolio-og-image.png"],
   },
 };
 

@@ -24,24 +24,40 @@ const postsDirectory = path.join(process.cwd(), 'src/content');
 export function getAllPosts(): BlogPostSummary[] {
   const fileNames = fs.readdirSync(postsDirectory);
 
-  const allPosts = fileNames
-    .filter((fileName) => fileName.endsWith('.md'))
-    .map((fileName) => {
-      const slug = fileName.replace(/\.md$/, '');
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const allPosts: BlogPostSummary[] = [];
+
+  fileNames.forEach((fileName) => {
+    if (!fileName.endsWith('.md')) return;
+
+    const slug = fileName.replace(/\.md$/, '');
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+    try {
       const matterResult = matter(fileContents);
 
-      return {
+      if (
+        !matterResult.data.title ||
+        !matterResult.data.date ||
+        !matterResult.data.summary ||
+        !matterResult.data.thumbnail
+      ) {
+        console.warn(`⚠️ Skipping ${fileName}: Missing required frontmatter`);
+        return;
+      }
+
+      allPosts.push({
         slug,
         title: matterResult.data.title,
         date: matterResult.data.date,
         summary: matterResult.data.summary,
         thumbnail: matterResult.data.thumbnail,
-      };
-    });
+      });
+    } catch (err) {
+      console.error(`❌ Error reading ${fileName}:`, err);
+    }
+  });
 
-  // Sort posts by date descending
   return allPosts.sort((a, b) =>
     new Date(a.date) < new Date(b.date) ? 1 : -1
   );
@@ -54,20 +70,29 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-  const matterResult = matter(fileContents);
+  let matterResult;
+  try {
+    matterResult = matter(fileContents);
+  } catch (err) {
+    throw new Error(`❌ Error parsing frontmatter in ${slug}.md: ${err}`);
+  }
 
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-
-  const contentHtml = processedContent.toString();
+  let contentHtml = '';
+  try {
+    const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content);
+    contentHtml = processedContent.toString();
+  } catch (err) {
+    console.warn(`⚠️ Skipping HTML processing for ${slug}:`, err);
+  }
 
   return {
     slug,
-    title: matterResult.data.title,
-    date: matterResult.data.date,
-    summary: matterResult.data.summary,
-    thumbnail: matterResult.data.thumbnail,
+    title: matterResult.data.title || 'Untitled',
+    date: matterResult.data.date || 'Unknown',
+    summary: matterResult.data.summary || '',
+    thumbnail: matterResult.data.thumbnail || '',
     contentHtml,
   };
 }

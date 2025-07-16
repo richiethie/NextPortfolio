@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://richiethie.com
+
+# Sitemaps
+Sitemap: https://richiethie.com/sitemap.xml
