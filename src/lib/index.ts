@@ -108,7 +108,7 @@ export const projects = [
     description:
       "A promotional website for Record Entertainment, a wedding DJ company, highlighting services, event packages, testimonials, and contact information.",
     tech: ["React", "Tailwind CSS", "Next.js"],
-    link: "not-live",
+    link: "https://recordentertainment.com/",
     github: "https://github.com/Pharos19/record-site",
     image: "/projects/record-site.png",
   },
