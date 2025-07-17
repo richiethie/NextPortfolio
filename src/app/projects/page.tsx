@@ -100,14 +100,14 @@ export default function ProjectsPage() {
                 <div className="bg-zinc-800 rounded-3xl border border-zinc-700 overflow-hidden shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 hover:-translate-y-2 group">
                   <div className="lg:flex">
                     <div className="lg:w-3/5 relative">
-                      <div className="relative h-96 w-full">
+                      <div className="relative h-full">
                         <Image
                           src={projects[0].image}
                           alt={projects[0].title}
                           fill
                           className="object-cover object-top w-full h-full group-hover:scale-105 transition-transform duration-500"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-zinc-800/60" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-zinc-800/60 group-hover:scale-105 transition-transform duration-500" />
                       </div>
                     </div>
                     <div className="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center">

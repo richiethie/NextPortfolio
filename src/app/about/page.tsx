@@ -8,19 +8,35 @@ export default function AboutPage() {
       role: "Software Engineer",
       company: "Roydan Enterprises",
       period: "Sep 2024 – Present",
-      description: "Building SaaS products, leading AI integrations, and developing custom solutions in React, Go, and .NET.",
+      description: [
+        "Built and maintained SaaS products using React, Go, and .NET, serving hundreds of end-users.",
+        "Led AI integrations to automate business workflows and improve product intelligence.",
+        "Collaborated with cross-functional teams on architecture decisions and feature planning.",
+        "Enhanced legacy codebases, improving maintainability, test coverage, and performance."
+      ],
     },
     {
       role: "Freelance Developer",
       company: "Self-employed",
       period: "2022 – Present",
-      description: "Designed and launched multiple client projects, including membership systems, waitlist PWAs, and social apps.",
+      description: [
+        "Designed and launched client projects, including membership systems, waitlist PWAs, and social apps.",
+        "Worked directly with clients to gather requirements, deliver custom solutions, and provide ongoing support.",
+        "Helped one client reach a projected $10k+ MRR through a custom membership platform.",
+        "Built mobile-first responsive UIs with React, Tailwind CSS, and React Native.",
+        "Managed deployments on Vercel and AWS, including CI/CD pipelines and performance optimizations."
+      ],
     },
     {
       role: "Software Programmer",
       company: "Accurate Controls",
       period: "Apr 2024 – Sep 2024",
-      description: "Assisted in backend development, built internal tools, and gained experience in Agile environments.",
+      description: [
+        "Engineered and enhanced custom security software applications, ensuring seamless integration with client systems.",
+        "Led software testing efforts, including test review, analysis, and certification, improving software reliability and security compliance.",
+        "Optimized SQL-based database queries to enhance data retrieval efficiency and system performance across multiple environments.",
+        "Automated repetitive user data entry processes with Python scripts, reducing manual workload and cutting development time by 10%."
+      ],
     },
   ];
 
@@ -46,7 +62,7 @@ export default function AboutPage() {
 
         {/* Experience */}
         <section>
-          <h2 className="text-3xl font-semibold mb-8 flex items-center">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-8 flex items-center">
             <Briefcase className="w-6 h-6 mr-2 text-emerald-400" />
             Work Experience
           </h2>
@@ -55,15 +71,19 @@ export default function AboutPage() {
               <div key={index} className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-emerald-500 transition-colors">
                 <h3 className="text-xl font-bold text-zinc-100">{job.role}</h3>
                 <p className="text-zinc-400">{job.company} · {job.period}</p>
-                <p className="text-zinc-300 mt-2">{job.description}</p>
+                <ul className="list-disc list-inside mt-2 text-zinc-300 space-y-1">
+                  {job.description.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Education (optional) */}
+        {/* Education */}
         <section>
-          <h2 className="text-3xl font-semibold mb-8 flex items-center">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-8 flex items-center">
             <GraduationCap className="w-6 h-6 mr-2 text-emerald-400" />
             Education
           </h2>

@@ -69,7 +69,7 @@ export default function ContactPage() {
             or just chatting about the latest in tech, design, or startup culture.
           </p>
           <p className="text-zinc-400 italic">
-            Fun fact: BitDrop was born from a random coffee-fueled brainstorming session ☕💡
+            Fun fact: BitDrop was born from a random coffee-fueled brainstorming session <span className="not-italic">☕💡</span>
           </p>
         </section>
 

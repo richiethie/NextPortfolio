@@ -281,41 +281,41 @@ export default function Home() {
             Whether you&apos;re looking to build something amazing or just want to chat about tech, I&apos;d love to hear from you.
           </p>
           
-          <div className="grid md:grid-cols-3 text-center gap-6 mb-12">
+          <div className="grid grid-cols-3 text-center gap-3 md:gap-6 mb-12">
             <a
               href="/contact"
-              className="group bg-zinc-800 p-6 rounded-2xl border border-zinc-700 hover:border-emerald-500 transition-colors"
+              className="flex flex-col items-center group bg-zinc-800 p-6 rounded-2xl border border-zinc-700 hover:border-emerald-500 transition-colors"
             >
               <Mail className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
               <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors">Email</h3>
-              <p className="text-zinc-400">Send me a message</p>
+              <p className="hidden md:block text-zinc-400">Send me a message</p>
             </a>
             
             <a
               href="https://linkedin.com/in/richiethie"
               target="_blank"
-              className="group bg-zinc-800 p-6 rounded-2xl border border-zinc-700 hover:border-emerald-500 transition-colors"
+              className="flex flex-col items-center group bg-zinc-800 p-6 rounded-2xl border border-zinc-700 hover:border-emerald-500 transition-colors"
             >
               <Linkedin className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
               <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors">LinkedIn</h3>
-              <p className="text-zinc-400">Connect with me</p>
+              <p className="hidden md:block text-zinc-400">Connect with me</p>
             </a>
             
             <a
               href="https://github.com/richiethie"
               target="_blank"
-              className="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
+              className="flex flex-col items-center group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
             >
               <Github className="w-8 h-8 text-blue-600 mx-auto mb-4" />
               <h3 className="font-semibold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">GitHub</h3>
-              <p className="text-slate-600 dark:text-slate-400">Check out my code</p>
+              <p className="hidden md:block text-slate-600 dark:text-slate-400">Check out my code</p>
             </a>
           </div>
           
           <a
             href="/Resume-July-25.pdf"
             download
-            className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-8 py-4 rounded-xl text-lg font-medium hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300"
+            className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-4 py-3 md:px-8 md:py-4 rounded-xl text-sm md:text-lg font-medium hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300"
           >
             Download Resume
             <ChevronRight className="w-5 h-5 ml-2" />
