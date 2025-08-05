@@ -41,6 +41,15 @@ export const projects = [
     image: "/projects/FilmShareFeed.png",
   },
   {
+    title: "Country Explorer",
+    description:
+      "A responsive, accessible web app for exploring countries. Features dark mode toggle, real-time filtering, infinite scroll, animations, and a polished mobile-first UI.",
+    tech: ["TypeScript", "Vite", "Tailwind CSS", "REST API"],
+    link: "https://country-explorer-liart.vercel.app/",
+    github: "https://github.com/richiethie/CountryExplorer",
+    image: "/projects/CountryExplorer.png",
+  },
+  {
     title: "Barbershop Membership Platform",
     description:
       "A subscription platform for barbershops, integrating Stripe payments, Acuity Scheduling, and real-time customer management.",
